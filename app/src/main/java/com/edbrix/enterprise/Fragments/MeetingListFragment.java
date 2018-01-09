@@ -126,7 +126,6 @@ public class MeetingListFragment extends BaseFragment implements SearchView.OnQu
             @Override
             public void onMeetingSelected(final Meeting meeting) {
                 meetingNo = meeting.getId();
-
                 assert user != null;
 
                 Intent intent = new Intent(context, MeetingDetailActivity.class);

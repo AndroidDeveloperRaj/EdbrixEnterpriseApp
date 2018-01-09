@@ -6,8 +6,8 @@ import android.graphics.Typeface;
 
 import java.lang.reflect.Field;
 
-public class FontsOverride {
-
+public class FontsOverride
+{
     public static void setDefaultFont(Context context,
                                       String staticTypefaceFieldName) {
         final Typeface regular = Typeface.createFromAsset(context.getAssets(), "OpenSans.ttf");
@@ -27,5 +27,4 @@ public class FontsOverride {
             e.printStackTrace();
         }
     }
-
 }

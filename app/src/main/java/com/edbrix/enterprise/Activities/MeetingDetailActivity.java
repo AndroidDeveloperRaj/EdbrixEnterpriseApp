@@ -122,7 +122,8 @@ public class MeetingDetailActivity extends BaseActivity implements ZoomSDKInitia
         registerForContextMenu(_meeting_detail_recycler);
         _meeting_detail_recycler.setAdapter(adapter);
 
-        _meeting_detail_button_connect.setOnClickListener(new View.OnClickListener() {
+        _meeting_detail_button_connect.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
 
@@ -145,12 +146,15 @@ public class MeetingDetailActivity extends BaseActivity implements ZoomSDKInitia
                                 startActivity(intent);
                             }
                         }
-                    } else if (meeting.getConnectType().equals(Constants.availabilityType_TrainingSession)) {
+                    } else if (meeting.getConnectType().equals(Constants.availabilityType_TrainingSession))
+                    {
                         Intent tokboxIntent = new Intent(MeetingDetailActivity.this, TokBoxActivity.class);
                         tokboxIntent.putExtra(Constants.TolkBox_SessionId, meeting.getMeetingId());
                         tokboxIntent.putExtra(Constants.TolkBox_Token, meeting.getMeetingToken());
                         startActivity(tokboxIntent);
-                    } else {
+                    }
+                    else
+                     {
                         if (meeting.getConnectURL() != null && meeting.getConnectURL().length() > 0) {
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(Uri.parse(meeting.getConnectURL()));

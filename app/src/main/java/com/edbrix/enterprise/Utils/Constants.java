@@ -1,7 +1,7 @@
 package com.edbrix.enterprise.Utils;
 
-public class Constants {
-
+public class Constants
+{
     public final static String contentType_C = "C";
     // http://enterpriseservices.edbrix.net/app/student/authenticatestudent
     public final static String contentType_WC = "WC";
