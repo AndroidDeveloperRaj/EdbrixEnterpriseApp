@@ -1433,6 +1433,9 @@ public class PlayCourseActivity extends BaseActivity implements ZoomSDKInitializ
                                     Intent tokboxIntent = new Intent(PlayCourseActivity.this, TokBoxActivity.class);
                                     tokboxIntent.putExtra(Constants.TolkBox_SessionId, sessionID);
                                     tokboxIntent.putExtra(Constants.TolkBox_Token, sessionTOKEN);
+                                    //Constants.TokBox_SessionId = sessionID;
+                                    //Constants.TokBox_Token = sessionTOKEN;
+                                    Log.e("Tokbox","Session :"+sessionID+"\nToken :"+sessionTOKEN);
                                     startActivity(tokboxIntent);
                                 } else {
                                     if (sessionEventContentData.getConnectURL() != null && sessionEventContentData.getConnectURL().length() > 0) {
